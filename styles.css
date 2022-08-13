@@ -1,0 +1,35 @@
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+.header {
+    grid-area: header;
+}
+
+.output {
+    grid-area: output;
+}
+
+.userInput {
+    grid-area: userInput;
+}
+
+.grid-container {
+    display: grid;
+    grid-template: 
+    'header header header header header header header header'
+    '. output output output output output output .'
+    '. userInput userInput userInput userInput userInput userInput .';
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
