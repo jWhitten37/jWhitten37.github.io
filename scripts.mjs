@@ -18,6 +18,7 @@ console.log(randomSentenceLength())
 // Stores the random sentence
 let generatedSentence = [];
 
+export function newWord() {
 for(let prop in word) {
     let optionIndex = randomWordSelector(word[prop].length)
 
@@ -30,9 +31,10 @@ for(let prop in word) {
             generatedSentence.push('Not enough info.')
     }
 }
+}
 
 export function formatInfo() {
-    const formatted = generatedSentence.join('\n')
+    const formatted = generatedSentence
     //return console.log(formatted)
     document.getElementById("msg").innerHTML = `${formatted}`;
 }
