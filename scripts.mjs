@@ -33,7 +33,8 @@ for(let prop in word) {
 
 export function formatInfo() {
     const formatted = generatedSentence.join('\n')
-    return console.log(formatted)
+    //return console.log(formatted)
+    document.getElementById("msg").innerHTML = `${formatted}`;
 }
 
 formatInfo();
