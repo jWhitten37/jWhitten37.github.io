@@ -6,11 +6,11 @@ body {
 
 .header {
     grid-area: header;
-    height: 100px;
 }
 
 .output {
     grid-area: output;
+    height: 500px;
 }
 
 .userInput {
