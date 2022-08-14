@@ -33,7 +33,7 @@ for(let prop in word) {
 }
 }
 
-export function formatInfo() {
+function formatInfo() {
     const formatted = generatedSentence
     //return console.log(formatted)
     document.getElementById("msg").innerHTML = `${formatted}`;
