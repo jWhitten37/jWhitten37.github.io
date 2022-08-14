@@ -31,9 +31,9 @@ for(let prop in word) {
     }
 }
 
-export function formatInfo(wordInfo) {
+export function formatInfo() {
     const formatted = generatedSentence.join('\n')
-    console.log(formatted)
+    return console.log(formatted)
 }
 
-formatInfo(generatedSentence);
+formatInfo();
