@@ -16,7 +16,7 @@ function randomSentenceLength() {
 console.log(randomSentenceLength())
 
 // Stores the random sentence
-let generatedSentence = [];
+let generatedSentence;
 
 function formatInfo() {
     const formatted = generatedSentence
@@ -31,10 +31,12 @@ for(let prop in word) {
     // grab the object's properties
     switch(prop) {
         case 'name':
-            generatedSentence.push(`"${word[prop][optionIndex]}"`)
+            //generatedSentence.push(`"${word[prop][optionIndex]}"`)
+            generatedSentence = `${word[prop][optionIndex]}`
             break
         default:
-            generatedSentence.push('Not enough info.')
+            //generatedSentence.push('Not enough info.')
+            generatedSentence = "Not enough info!"
     }
 }
 formatInfo();
