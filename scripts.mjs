@@ -5,7 +5,7 @@ const word = wordList;
 // Generate a random number for selecting a word from our 'wordFile_v2.mjs'
 function randomWordSelector(num) {
     // Gets # from 0 -> num - 1
-    return Math.floor(Math.random() * num)
+    return Math.floor(Math.random() * num - 1)
 }
 
 // Generate a random number for sentence length
