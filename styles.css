@@ -10,7 +10,6 @@ body {
 
 .output {
     grid-area: output;
-    height: 500px;
 }
 
 .userInput {
@@ -21,9 +20,6 @@ body {
     display: grid;
     grid-template: 
     'header header header header header header header header'
-    '. output output output output output output .'
-    '. output output output output output output .'
-    '. output output output output output output .'
     '. output output output output output output .'
     '. userInput userInput userInput userInput userInput userInput .';
     gap: 10px;
