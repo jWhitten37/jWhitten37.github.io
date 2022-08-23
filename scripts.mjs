@@ -27,7 +27,7 @@ function formatInfo() {
 
 export function newWord() {
     sentenceLength = randomSentenceLength();
-    console.log(randomSentenceLength())
+    console.log(randomSentenceLength());
     for (let i = 0; i < sentenceLength; i++) {
         for(let prop in word) {
             let optionIndex = randomWordSelector(word[prop].length)
