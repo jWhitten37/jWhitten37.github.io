@@ -5,7 +5,7 @@ const word = wordList;
 // Generate a random number for selecting a word from our 'wordFile_v2.mjs'
 function randomWordSelector(num) {
     // Gets # from 1 -> num - 1
-    return Math.floor(1 + Math.random() * num - 1)
+    return Math.floor(Math.random() * num - 1)
 }
 
 // Generate a random number for sentence length
@@ -13,7 +13,7 @@ function randomSentenceLength() {
     // Gets # from 1 -> 50
     return Math.floor(1 + Math.random() * 5)
 }
-
+let sentenceLength;
 
 // Stores the randomly generated sentence
 let generatedSentence = [];
@@ -26,9 +26,9 @@ function formatInfo() {
 }
 
 export function newWord() {
-    let sentenceLength = randomSentenceLength();
-    console.log(randomSentenceLength())
     for (let i = 0; i < sentenceLength; i++) {
+        sentenceLength = randomSentenceLength();
+        console.log(randomSentenceLength())
         for(let prop in word) {
             let optionIndex = randomWordSelector(word[prop].length)
 
