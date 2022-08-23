@@ -23,6 +23,7 @@ function formatInfo() {
     const formatted = generatedSentence.join(' ');
     //return console.log(formatted)
     document.getElementById("msg").innerHTML = `${formatted}`;
+    generatedSentence = [];
 }
 
 export function newWord() {
