@@ -13,7 +13,6 @@ function randomSentenceLength() {
     // Gets # from 1 -> 50
     return Math.floor(1 + Math.random() * 5)
 }
-let sentenceLength;
 
 // Stores the randomly generated sentence
 let generatedSentence = [];
@@ -26,8 +25,8 @@ function formatInfo() {
 }
 
 export function newWord() {
-    sentenceLength = randomSentenceLength();
-    console.log(randomSentenceLength());
+    let sentenceLength = randomSentenceLength();
+    console.log(sentenceLength);
     for (let i = 0; i < sentenceLength; i++) {
         for(let prop in word) {
             let optionIndex = randomWordSelector(word[prop].length)
