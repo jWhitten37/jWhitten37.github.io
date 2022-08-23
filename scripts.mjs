@@ -13,6 +13,7 @@ function randomSentenceLength() {
     // Gets # from 1 -> 50
     return Math.floor(1 + Math.random() * 5)
 }
+let sentenceLength;
 
 // Stores the randomly generated sentence
 let generatedSentence = [];
@@ -20,14 +21,14 @@ let generatedSentence = [];
 function formatInfo() {
     const formatted = generatedSentence.join(' ');
     //return console.log(formatted)
-    document.getElementById("msg").innerHTML = `${formatted}`;
+    document.getElementById("msg").innerHTML = `"${formatted}"`;
     generatedSentence = [];
 }
 
 export function newWord() {
-    let sentenceLength = randomSentenceLength();
-    console.log(sentenceLength);
-    for (let i = 0; i < sentenceLength; i++) {
+    sentenceLength = randomSentenceLength()
+    console.log(sentenceLength)
+    for (let i = 1; i <= sentenceLength; i++) {
         for(let prop in word) {
             let optionIndex = randomWordSelector(word[prop].length)
 
@@ -41,11 +42,10 @@ export function newWord() {
                     //generatedSentence.push('Not enough info.')
                     generatedSentence.push("Not enough info!");
             }
+            console.log(`${word[prop][optionIndex]}`)
         }
         console.log(i);
     }
     formatInfo();
 }
-
-
 
