@@ -13,10 +13,9 @@ function randomSentenceLength() {
     // Gets # from 1 -> 50
     return Math.floor(1 + Math.random() * 5)
 }
-let sentenceLength = randomSentenceLength();
-console.log(randomSentenceLength())
 
-// Stores the random sentence
+
+// Stores the randomly generated sentence
 let generatedSentence = [];
 
 function formatInfo() {
@@ -27,23 +26,26 @@ function formatInfo() {
 }
 
 export function newWord() {
-for (let i = 0; i < sentenceLength; i++) {
-    for(let prop in word) {
-        let optionIndex = randomWordSelector(word[prop].length)
+    let sentenceLength = randomSentenceLength();
+    console.log(randomSentenceLength())
+    for (let i = 0; i < sentenceLength; i++) {
+        for(let prop in word) {
+            let optionIndex = randomWordSelector(word[prop].length)
 
-        // grab the object's properties
-        switch(prop) {
-            case 'name':
-                //generatedSentence.push(`"${word[prop][optionIndex]}"`)
-                generatedSentence.push(`${word[prop][optionIndex]}`);
-                break
-            default:
-                //generatedSentence.push('Not enough info.')
-                generatedSentence.push("Not enough info!");
+            // grab the object's properties
+            switch(prop) {
+                case 'name':
+                    //generatedSentence.push(`"${word[prop][optionIndex]}"`)
+                    generatedSentence.push(`${word[prop][optionIndex]}`);
+                    break
+                default:
+                    //generatedSentence.push('Not enough info.')
+                    generatedSentence.push("Not enough info!");
+            }
         }
+        console.log(i);
     }
-}
-formatInfo();
+    formatInfo();
 }
 
 
