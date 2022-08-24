@@ -42,9 +42,7 @@ export function newWord() {
                     //generatedSentence.push('Not enough info.')
                     generatedSentence.push("Not enough info!");
             }
-            console.log(`${word[prop][optionIndex]}`)
         }
-        console.log(i);
     }
     formatInfo();
 }
