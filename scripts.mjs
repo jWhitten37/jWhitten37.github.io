@@ -11,7 +11,7 @@ function randomWordSelector(num) {
 // Generate a random number for sentence length
 function randomSentenceLength() {
     // Gets # from 1 -> 50
-    return Math.floor(1 + Math.random() * 5)
+    return Math.floor(1 + Math.random() * 50)
 }
 let sentenceLength;
 
